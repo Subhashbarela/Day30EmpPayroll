@@ -1,14 +1,3 @@
-create database payroll_service;
-
-create table employee_payroll(id int not null identity,
-name varchar(50) not null,
-salary   bigint NOT NULL,
-start  date not null,
-primary key (id)
-)
-
-insert into employee_payroll(name,salary,start,Gender)
-values('bill',456765,'2020-06-23','M')
 
 
 select * from employee_payroll
@@ -17,8 +6,17 @@ select * from employee_payroll
 alter table employee_payroll add  Gender varchar(2);
 
 update employee_payroll set Gender ='F' where name ='rani'
+--Retrive data using aggregate function
 
-alter table employee_payroll drop column Gender
+
+select sum(salary) as total_salary from employee_payroll
+select max(salary) as Max_Salary from employee_payroll 
+select avg(salary) as total_salary from employee_payroll
+
+select sum(salary) as total_salary from employee_payroll where Gender ='M' group by Gender
+
+
+
 
 
 
