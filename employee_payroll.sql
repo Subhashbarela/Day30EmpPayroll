@@ -14,6 +14,7 @@ values('raj',200000,'2019-01-03'),
 ('vinnu',300000,'2020-04-05'),
 ('charlis',430000,'2021-09-14')
 
-select * from employee_payroll
+-- retrive data using where condition 
+select Salary from employee_payroll where name ='charlis'
 
-select id, name,salary,start  as Start_Date from employee_payroll
+select Salary from employee_payroll where start between '2020-04-05' and '2021-10-14'
